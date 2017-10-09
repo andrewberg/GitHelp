@@ -1,0 +1,6 @@
+framework module Pods_GitHelp {
+  umbrella header "Pods-GitHelp-umbrella.h"
+
+  export *
+  module * { export * }
+}
