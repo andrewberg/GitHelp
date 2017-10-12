@@ -12,8 +12,18 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        
+        let net = NetworkingJSON()
+        
+       
+        // var x = [Lesson]()
+        
+        net.getLessonsFromURL(url: "http://bergcode.com/heroes.json")
+
+        
     }
+    
+    
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
