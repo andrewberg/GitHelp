@@ -56,7 +56,7 @@ class NetworkingJSON {
         
     }
     
-    func completeLessons(){
+    func completeLessons() {
         for lesson in lessons {
             print("\(lesson.name) + \(lesson.number) + \(lesson.text)")
         }

@@ -14,13 +14,8 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         
         let net = NetworkingJSON()
-        
-       
-        // var x = [Lesson]()
-        
-        net.getLessonsFromURL(url: "http://bergcode.com/heroes.json")
 
-        
+        net.getLessonsFromURL(url: "http://bergcode.com/heroes.json")
     }
     
     
