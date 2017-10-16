@@ -9,6 +9,7 @@
 import XCTest
 @testable import GitHelp
 
+    /* Implemented by Andrew */
 class GitHelpTests: XCTestCase {
     
     override func setUp() {
@@ -33,6 +34,7 @@ class GitHelpTests: XCTestCase {
         }
     }
     
+    /* Implemented by Andrew */
     func testNetworkingRequest() {
         // Networking object
         let net = NetworkingJSON()

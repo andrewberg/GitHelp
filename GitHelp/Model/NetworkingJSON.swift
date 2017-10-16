@@ -8,6 +8,7 @@
 
 import Foundation
 
+/* Implemented by Andrew */
 class NetworkingJSON {
     var lessons = [Lesson]()
 

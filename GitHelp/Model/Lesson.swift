@@ -8,6 +8,7 @@
 
 import Foundation
 
+    /* Implemented by Andrew */
 class Lesson {
     
     var name = "Lesson"
