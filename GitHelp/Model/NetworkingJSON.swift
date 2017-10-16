@@ -8,6 +8,7 @@
 
 import Foundation
 
+/* Implemented by Andrew */
 class NetworkingJSON {
     var lessons = [Lesson]()
 
@@ -56,7 +57,7 @@ class NetworkingJSON {
         
     }
     
-    func completeLessons(){
+    func completeLessons() {
         for lesson in lessons {
             print("\(lesson.name) + \(lesson.number) + \(lesson.text)")
         }
