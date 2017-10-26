@@ -8,10 +8,24 @@
 
 import Foundation
 
-    /* Implemented by Andrew */
-class Lesson {
+/* Implemented by Andrew */
+
+struct Lesson {
+    let name: String
+    let text: String
+    let num: Int
+}
+
+extension Lesson {
+    private enum Keys: String, SerializationKey {
+        case name = "lessonName"
+        case text = "lessonTxt"
+        case num = "lessonNum"
+    }
     
-    var name = "Lesson"
-    var number = 1
-    var text = ""
+    init(serialization: Serialization) {
+        name = serialization.value(forKey: Keys.name)!
+        text = serialization.value(forKey: Keys.text)!
+        num = serialization.value(forKey: Keys.num)!
+    }
 }

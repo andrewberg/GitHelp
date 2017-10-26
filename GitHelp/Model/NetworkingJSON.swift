@@ -9,7 +9,7 @@
 import Foundation
 
 /* Implemented by Andrew */
-class NetworkingJSON {
+/*class NetworkingJSON {
     var lessons = [Lesson]()
 
     func getLessonsFromURL(url: String) {
@@ -62,4 +62,4 @@ class NetworkingJSON {
             print("\(lesson.name) + \(lesson.number) + \(lesson.text)")
         }
     }
-}
+}*/
