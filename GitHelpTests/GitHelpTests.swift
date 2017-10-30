@@ -36,22 +36,34 @@ class GitHelpTests: XCTestCase {
     
     /* Implemented by Andrew */
     func testNetworkingRequest() {
-        // Networking object
-        let net = NetworkingJSON()
+        var y = [Lesson]()
         
-        // gets the lessons from bergcode server
-        net.getLessonsFromURL(url: "http://bergcode.com/heroes.json")
+        // Networking object
+        func fetchLesson() {
+            let lessonsResource = LessonsResource()
+            let lessonsRequest = ApiRequest(resource: lessonsResource)
+            lessonsRequest.load { [weak self] (lessons: [Lesson]?) in
+                guard let lessons = lessons else {
+                        print("nothing")
+                        return
+                }
+                
+                y = lessons
+                print(y)
+                
+            }
+        }
         
         // describes the test object
         let promise = expectation(description: "JSON Objects returned")
         
         // what we expect from this test
-        if net.lessons.count > 0 {
+        if y.count > 0 {
             promise.fulfill()
         }
         
         // give it 5 seconds to complete if not something is wrong
-        waitForExpectations(timeout: 5, handler: nil)
+        waitForExpectations(timeout: 10, handler: nil)
     }
     
 }
