@@ -1,35 +1,37 @@
 //
-//  ViewController.swift
+//  LessonViewController.swift
 //  GitHelp
 //
-//  Created by Andrew on 10/9/17.
+//  Created by Jared on 10/31/17.
 //  Copyright © 2017 GitHelp. All rights reserved.
 //
 
 import UIKit
 
-class ViewController: UIViewController {
+class LessonViewController: UIViewController {
     
     fileprivate var request: AnyObject?
     
-    /* Implemented by Andrew */
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        // call fetch lessons
         fetchLesson()
-
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
+ 
 
 }
 
-private extension ViewController {
-    func configureUI(with lesson: Lesson) {
+private extension LessonViewController {
+    func configureUI(with lesson: Array<Lesson>) {
+        for element in lesson{
+            print(element)
+        }
+        
     }
     
     func fetchLesson() {
@@ -37,15 +39,12 @@ private extension ViewController {
         let lessonsRequest = ApiRequest(resource: lessonsResource)
         request = lessonsRequest
         lessonsRequest.load { [weak self] (lessons: [Lesson]?) in
-            guard let lessons = lessons,
-                let topLesson = lessons.first else {
+            guard let lessons = lessons else {
                     print("nothing")
                     return
             }
             
-            // print(lessons)
-            self?.configureUI(with: topLesson)
-            
+            self?.configureUI(with: lessons)
         }
     }
 }
