@@ -42,7 +42,7 @@
         <!--Lessons-->
         <scene sceneID="DxI-Sd-Hl4">
             <objects>
-                <viewController id="RYh-wf-rZn" customClass="ViewController" customModule="GitHelp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="RYh-wf-rZn" customClass="LessonViewController" customModule="GitHelp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="cIk-vQ-RaN">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
