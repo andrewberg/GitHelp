@@ -11,7 +11,7 @@ import UIKit
 class LessonViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate {
     
     @IBOutlet weak var myCollectionView: UICollectionView!
-    myCollectionView?.register
+    //myCollectionView?.register()
     
     let cellId = "cellId"
     fileprivate var request: AnyObject?
