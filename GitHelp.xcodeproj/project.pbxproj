@@ -132,7 +132,6 @@
 		493BCB881F8C23FD006F3EF8 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				493BCB761F8C2395006F3EF8 /* ViewController.swift */,
 				7F775DD41FB1EF4000DC5CF3 /* CustomCell.swift */,
 			);
 			path = View;
@@ -143,6 +142,7 @@
 			children = (
 				493BCB741F8C2395006F3EF8 /* AppDelegate.swift */,
 				7F1C9E531FA902E500EB0E30 /* LessonViewController.swift */,
+				493BCB761F8C2395006F3EF8 /* ViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";

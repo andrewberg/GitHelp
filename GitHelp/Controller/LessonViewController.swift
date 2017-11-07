@@ -11,26 +11,27 @@ import UIKit
 class LessonViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate {
     
     @IBOutlet weak var myCollectionView: UICollectionView!
-    //myCollectionView?.register()
-    
-    let cellId = "cellId"
     fileprivate var request: AnyObject?
+    let cellId = "cellId"
     var myLessons: [Lesson]!
-    var test = ["chapter1", "chapter2"]
+    var test = ["chapter1", "chapter2", "chapter3", "chapter4"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        myCollectionView.delegate = self
-        myCollectionView.dataSource = self
-        
         print("lessons size before fetch \(test.count)")
-        // call fetch lessons
-        fetchLesson()
+        fetchLesson() // call fetch lessons
         print("lessons size after fetch \(test.count)")
+        setupMyCollectionView()
         
     }
 
+    func setupMyCollectionView(){
+        myCollectionView?.delegate = self
+        myCollectionView?.dataSource = self
+        myCollectionView?.backgroundColor = UIColor(red: 42.0/255.0, green: 62.0/255.0, blue: 68.0/255.0, alpha: 1.0)
+        //myCollectionView?.register()
+    }
+    
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return test.count
     }
@@ -40,7 +41,9 @@ class LessonViewController: UIViewController, UICollectionViewDataSource, UIColl
         
         cell.layer.cornerRadius = 50
         cell.myLabel.text = test[indexPath.row]
-        cell.backgroundColor = UIColor.blue
+        cell.backgroundColor = UIColor.lightGray
+        cell.layer.borderColor = UIColor.white.cgColor
+        cell.layer.borderWidth = 2
         return cell
     }
 }
