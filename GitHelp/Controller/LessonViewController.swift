@@ -8,14 +8,13 @@
 
 import UIKit
 
-class LessonViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate {
+class LessonViewController: BaseViewController, UICollectionViewDataSource, UICollectionViewDelegate {
     
     @IBOutlet weak var myCollectionView: UICollectionView!
     
     fileprivate var request: AnyObject?
     
     let cellId = "cellId"
-    let bgColor: UIColor = UIColor(red: 42.0/255.0, green: 62.0/255.0, blue: 68.0/255.0, alpha: 1.0)
     
     var activityIndicator: UIActivityIndicatorView = UIActivityIndicatorView()
     var myLessons: [Lesson] = []
@@ -45,9 +44,10 @@ class LessonViewController: UIViewController, UICollectionViewDataSource, UIColl
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) { 
-        let newViewController = UIViewController()
+        let newViewController = TemplateViewController()
         newViewController.navigationItem.title = myLessons[indexPath.row].name
         newViewController.view.backgroundColor = bgColor
+        newViewController.setTextView(text: myLessons[indexPath.row].text)
         navigationController?.navigationBar.tintColor = UIColor.white
         navigationController?.pushViewController(newViewController, animated: true)
     }

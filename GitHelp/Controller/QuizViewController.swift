@@ -8,14 +8,13 @@
 
 import UIKit
 
-class QuizViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate {
+class QuizViewController: BaseViewController, UICollectionViewDataSource, UICollectionViewDelegate {
     
     @IBOutlet weak var myQuizCollectionView: UICollectionView!
 
     fileprivate var request: AnyObject?
     
     let cellId = "cellId"
-    let bgColor: UIColor = UIColor(red: 42.0/255.0, green: 62.0/255.0, blue: 68.0/255.0, alpha: 1.0)
     
     var activityIndicator: UIActivityIndicatorView = UIActivityIndicatorView()
     var myQuizzes: [Lesson] = []
