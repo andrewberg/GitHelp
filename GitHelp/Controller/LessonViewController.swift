@@ -14,8 +14,6 @@ class LessonViewController: BaseViewController, UICollectionViewDataSource, UICo
     
     fileprivate var request: AnyObject?
     
-    let cellId = "cellId"
-    
     var activityIndicator: UIActivityIndicatorView = UIActivityIndicatorView()
     var myLessons: [Lesson] = []
     
@@ -40,11 +38,11 @@ class LessonViewController: BaseViewController, UICollectionViewDataSource, UICo
         myCollectionView?.backgroundColor = bgColor
         
         navigationController?.navigationBar.isTranslucent = false
-        navigationItem.title = "Lesson"
+        navigationItem.title = "Lessons"
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) { 
-        let newViewController = TemplateViewController()
+        let newViewController = BodyTemplateViewController()
         newViewController.navigationItem.title = myLessons[indexPath.row].name
         newViewController.view.backgroundColor = bgColor
         newViewController.setTextView(text: myLessons[indexPath.row].text)

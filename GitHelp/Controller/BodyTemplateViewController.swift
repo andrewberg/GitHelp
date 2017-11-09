@@ -8,7 +8,7 @@
 
 import UIKit
 
-class TemplateViewController: BaseViewController {
+class BodyTemplateViewController: BaseViewController {
     
     var myTextView: UITextView!
     

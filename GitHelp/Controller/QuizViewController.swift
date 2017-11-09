@@ -14,8 +14,6 @@ class QuizViewController: BaseViewController, UICollectionViewDataSource, UIColl
 
     fileprivate var request: AnyObject?
     
-    let cellId = "cellId"
-    
     var activityIndicator: UIActivityIndicatorView = UIActivityIndicatorView()
     var myQuizzes: [Lesson] = []
     

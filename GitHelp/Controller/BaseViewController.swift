@@ -11,6 +11,7 @@ import UIKit
 class BaseViewController: UIViewController {
     
     let bgColor: UIColor = UIColor(red: 42.0/255.0, green: 62.0/255.0, blue: 68.0/255.0, alpha: 1.0)
+    let cellId = "cellId"
     
     override func viewDidLoad() {
         super.viewDidLoad()

@@ -21,7 +21,7 @@
 		7F1C9E541FA902E500EB0E30 /* LessonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F1C9E531FA902E500EB0E30 /* LessonViewController.swift */; };
 		7F775DD51FB1EF4000DC5CF3 /* CustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F775DD41FB1EF4000DC5CF3 /* CustomCell.swift */; };
 		7F775DD91FB4B88700DC5CF3 /* QuizViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F775DD81FB4B88700DC5CF3 /* QuizViewController.swift */; };
-		7F775DDB1FB4C8CF00DC5CF3 /* TemplateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F775DDA1FB4C8CF00DC5CF3 /* TemplateViewController.swift */; };
+		7F775DDB1FB4C8CF00DC5CF3 /* BodyTemplateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F775DDA1FB4C8CF00DC5CF3 /* BodyTemplateViewController.swift */; };
 		7F775DDD1FB4DC6B00DC5CF3 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F775DDC1FB4DC6B00DC5CF3 /* BaseViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -53,7 +53,7 @@
 		7F1C9E531FA902E500EB0E30 /* LessonViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LessonViewController.swift; sourceTree = "<group>"; };
 		7F775DD41FB1EF4000DC5CF3 /* CustomCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCell.swift; sourceTree = "<group>"; };
 		7F775DD81FB4B88700DC5CF3 /* QuizViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuizViewController.swift; sourceTree = "<group>"; };
-		7F775DDA1FB4C8CF00DC5CF3 /* TemplateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TemplateViewController.swift; sourceTree = "<group>"; };
+		7F775DDA1FB4C8CF00DC5CF3 /* BodyTemplateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BodyTemplateViewController.swift; sourceTree = "<group>"; };
 		7F775DDC1FB4DC6B00DC5CF3 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		CC5E26C580AB8FEEA123C7BA /* Pods_GitHelp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GitHelp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E5182B07AE746FE2A90373E7 /* Pods-GitHelp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GitHelp.release.xcconfig"; path = "Pods/Target Support Files/Pods-GitHelp/Pods-GitHelp.release.xcconfig"; sourceTree = "<group>"; };
@@ -145,9 +145,9 @@
 			isa = PBXGroup;
 			children = (
 				7F775DDC1FB4DC6B00DC5CF3 /* BaseViewController.swift */,
-				7F775DDA1FB4C8CF00DC5CF3 /* TemplateViewController.swift */,
 				7F775DD81FB4B88700DC5CF3 /* QuizViewController.swift */,
 				7F1C9E531FA902E500EB0E30 /* LessonViewController.swift */,
+				7F775DDA1FB4C8CF00DC5CF3 /* BodyTemplateViewController.swift */,
 				493BCB761F8C2395006F3EF8 /* TestViewController.swift */,
 			);
 			path = Controller;
@@ -330,7 +330,7 @@
 				49BA736B1F9FDE8900B67446 /* NetworkRequest.swift in Sources */,
 				496E16B71F8D23FE00F2705A /* Lesson.swift in Sources */,
 				49BA736D1F9FDECE00B67446 /* APIResources.swift in Sources */,
-				7F775DDB1FB4C8CF00DC5CF3 /* TemplateViewController.swift in Sources */,
+				7F775DDB1FB4C8CF00DC5CF3 /* BodyTemplateViewController.swift in Sources */,
 				7F775DD51FB1EF4000DC5CF3 /* CustomCell.swift in Sources */,
 				7F775DDD1FB4DC6B00DC5CF3 /* BaseViewController.swift in Sources */,
 				493BCB771F8C2395006F3EF8 /* TestViewController.swift in Sources */,

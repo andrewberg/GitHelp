@@ -12,15 +12,18 @@ import UIKit
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-
+    
+    let bgColor = UIColor(red: 42.0/255.0, green: 62.0/255.0, blue: 68.0/255.0, alpha: 1.0)
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         
-        // customize navigation controller
-        UINavigationBar.appearance().barTintColor = UIColor(red: 42.0/255.0, green: 62.0/255.0, blue: 68.0/255.0, alpha: 1.0)
+        // customize tab bar look
+        UITabBar.appearance().tintColor = UIColor.white // text & icon color
+        UITabBar.appearance().barTintColor = bgColor // tab bar color
         
-        // remove black line underneath
-        UINavigationBar.appearance().shadowImage = UIImage()
+        // customize navigation controller
+        UINavigationBar.appearance().barTintColor = bgColor
+        UINavigationBar.appearance().shadowImage = UIImage() // remove bottom black border
         UINavigationBar.appearance().setBackgroundImage(UIImage(), for: .default)
         
         // white status bar at top
