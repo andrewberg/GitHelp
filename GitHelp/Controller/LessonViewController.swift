@@ -19,7 +19,7 @@ class LessonViewController: UIViewController, UICollectionViewDataSource, UIColl
     
     var activityIndicator: UIActivityIndicatorView = UIActivityIndicatorView()
     var myLessons: [Lesson] = []
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         setupMyCollectionView() // setup properties
@@ -42,6 +42,14 @@ class LessonViewController: UIViewController, UICollectionViewDataSource, UIColl
         
         navigationController?.navigationBar.isTranslucent = false
         navigationItem.title = "Lesson"
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) { 
+        let newViewController = UIViewController()
+        newViewController.navigationItem.title = myLessons[indexPath.row].name
+        newViewController.view.backgroundColor = bgColor
+        navigationController?.navigationBar.tintColor = UIColor.white
+        navigationController?.pushViewController(newViewController, animated: true)
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
