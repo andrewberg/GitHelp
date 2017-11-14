@@ -33,7 +33,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="zd2-4b-jay"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="About" id="9QF-nL-Nlx" userLabel="AboutView"/>
+                    <tabBarItem key="tabBarItem" systemItem="more" id="9QF-nL-Nlx" userLabel="AboutView"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zie-WF-G4I" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
