@@ -1,22 +1,20 @@
 //
-//  APIResources.swift
+//  APIResourcesQuiz.swift
 //  GitHelp
 //
-//  Created by Andrew on 10/24/17.
+//  Created by Andrew on 11/26/17.
 //  Copyright © 2017 GitHelp. All rights reserved.
 //
 
 import Foundation
 
-/* Implemented by Andrew */
-
-struct ApiWrapper {
+struct ApiWrapperQuiz {
     let items: [Serialization]
 }
 
-extension ApiWrapper {
+extension ApiWrapperQuiz {
     private enum Keys: String, SerializationKey {
-        case items = "lessons"
+        case items = "quizzes"
     }
     
     init(serialization: Serialization) {
@@ -24,14 +22,14 @@ extension ApiWrapper {
     }
 }
 
-protocol ApiResource {
+protocol ApiResourceQuiz {
     associatedtype Model
     func makeModel(serialization: Serialization) -> Model
 }
 
-extension ApiResource {
+extension ApiResourceQuiz {
     var url: URL {
-        let url = "http://45.55.51.127/lessons.json"
+        let url = "http://45.55.51.127/quizzes.json"
         return URL(string: url)!
     }
     
@@ -42,14 +40,15 @@ extension ApiResource {
         guard let jsonSerialization = json as? Serialization else {
             return nil
         }
-        let wrapper = ApiWrapper(serialization: jsonSerialization)
+        let wrapper = ApiWrapperQuiz(serialization: jsonSerialization)
         return wrapper.items.map(makeModel(serialization:))
     }
 }
 
-struct LessonsResource: ApiResource {
+struct QuizzesResource: ApiResourceQuiz {
     
-    func makeModel(serialization: Serialization) -> Lesson {
-        return Lesson(serialization: serialization)
+    func makeModel(serialization: Serialization) -> Quiz {
+        return Quiz(serialization: serialization)
     }
 }
+
