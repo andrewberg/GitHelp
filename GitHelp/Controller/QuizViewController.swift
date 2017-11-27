@@ -15,7 +15,7 @@ class QuizViewController: BaseViewController, UICollectionViewDataSource, UIColl
     fileprivate var request: AnyObject?
     
     var activityIndicator: UIActivityIndicatorView = UIActivityIndicatorView()
-    var myLessons: [Quiz] = []
+    var myQuizzes: [Quiz] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -42,16 +42,24 @@ class QuizViewController: BaseViewController, UICollectionViewDataSource, UIColl
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        let newViewController = BodyTemplateViewController()
-        newViewController.navigationItem.title = myLessons[indexPath.row].title
-        newViewController.view.backgroundColor = bgColor
-        newViewController.setTextView(text: myLessons[indexPath.row].title)
-        navigationController?.navigationBar.tintColor = UIColor.white
-        navigationController?.pushViewController(newViewController, animated: true)
+        
+        let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
+        let resultViewController = storyBoard.instantiateViewController(withIdentifier: "quiz") as! QuizTemplateViewController
+        
+        
+
+        
+        resultViewController.quiz = myQuizzes[indexPath.row]
+        
+        resultViewController.navigationItem.title = myQuizzes[indexPath.row].title
+        resultViewController.view.backgroundColor = bgColor
+        
+        self.navigationController?.pushViewController(resultViewController, animated: true)
+        
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return myLessons.count
+        return myQuizzes.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -61,7 +69,7 @@ class QuizViewController: BaseViewController, UICollectionViewDataSource, UIColl
         cell.layer.cornerRadius = 50
         cell.layer.borderColor = UIColor.lightGray.cgColor
         cell.layer.borderWidth = 2
-        cell.myLabel.text = myLessons[indexPath.row].title
+        cell.myLabel.text = myQuizzes[indexPath.row].title
         cell.myLabel.textColor = UIColor.darkGray
         
         return cell
@@ -70,10 +78,11 @@ class QuizViewController: BaseViewController, UICollectionViewDataSource, UIColl
 
 private extension QuizViewController {
     
-    func configureUI(with lesson: Array<Quiz>) {
-        for element in lesson {
-            myLessons.append(element) // add every element fetched to the array
+    func configureUI(with quizzes: Array<Quiz>) {
+        for element in quizzes {
+            myQuizzes.append(element) // add every element fetched to the array
         }
+        
         activityIndicator.stopAnimating() // stop the animation for waiting
         myQuizCollectionView.reloadData() // refresh the view so that the cells can populate
     }

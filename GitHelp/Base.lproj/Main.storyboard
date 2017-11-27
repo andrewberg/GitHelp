@@ -5,6 +5,7 @@
     </device>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -38,6 +39,86 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zie-WF-G4I" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1793" y="-593"/>
+        </scene>
+        <!--Quiz Template View Controller-->
+        <scene sceneID="Vdo-d3-0g0">
+            <objects>
+                <viewController storyboardIdentifier="quiz" id="lvs-N2-OW0" customClass="QuizTemplateViewController" customModule="GitHelp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="GCi-5Q-6Yg">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="9" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PPv-7S-v3i">
+                                <rect key="frame" x="16" y="20" width="343" height="123"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xET-aV-8dC">
+                                <rect key="frame" x="16" y="151" width="343" height="61"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="61" id="4Jj-yz-PaQ"/>
+                                </constraints>
+                                <state key="normal" title="Button">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="butOne:" destination="lvs-N2-OW0" eventType="touchUpInside" id="d6B-zL-7bT"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tZy-Rj-CVx">
+                                <rect key="frame" x="16" y="397" width="343" height="61"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="61" id="lXp-ae-Lo2"/>
+                                </constraints>
+                                <state key="normal" title="Button">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="butThree:" destination="lvs-N2-OW0" eventType="touchUpInside" id="7Gu-5s-iYu"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="59B-ZO-Lgs">
+                                <rect key="frame" x="16" y="277" width="343" height="61"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="61" id="14Z-JZ-7qb"/>
+                                </constraints>
+                                <state key="normal" title="Button">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="butTwo:" destination="lvs-N2-OW0" eventType="touchUpInside" id="mt4-Rm-KjY"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="xET-aV-8dC" firstAttribute="leading" secondItem="59B-ZO-Lgs" secondAttribute="leading" id="0Cm-xn-Fzn"/>
+                            <constraint firstItem="PPv-7S-v3i" firstAttribute="leading" secondItem="GCi-5Q-6Yg" secondAttribute="leadingMargin" id="3kE-KI-FbZ"/>
+                            <constraint firstItem="PPv-7S-v3i" firstAttribute="leading" secondItem="xET-aV-8dC" secondAttribute="leading" id="3nd-P2-mZI"/>
+                            <constraint firstItem="PPv-7S-v3i" firstAttribute="top" secondItem="Az2-nu-uJB" secondAttribute="top" id="7NJ-EY-Qru"/>
+                            <constraint firstItem="59B-ZO-Lgs" firstAttribute="leading" secondItem="tZy-Rj-CVx" secondAttribute="leading" id="9Lf-dZ-RtD"/>
+                            <constraint firstItem="xET-aV-8dC" firstAttribute="trailing" secondItem="59B-ZO-Lgs" secondAttribute="trailing" id="Cg3-wO-HM3"/>
+                            <constraint firstItem="Az2-nu-uJB" firstAttribute="bottom" secondItem="tZy-Rj-CVx" secondAttribute="bottom" constant="209" id="D0L-oL-EY2"/>
+                            <constraint firstItem="PPv-7S-v3i" firstAttribute="trailing" secondItem="GCi-5Q-6Yg" secondAttribute="trailingMargin" id="DU6-Ib-OqD"/>
+                            <constraint firstItem="PPv-7S-v3i" firstAttribute="trailing" secondItem="xET-aV-8dC" secondAttribute="trailing" id="G3X-RD-JoO"/>
+                            <constraint firstItem="tZy-Rj-CVx" firstAttribute="top" secondItem="59B-ZO-Lgs" secondAttribute="bottom" constant="59" id="Hv8-lB-Whs"/>
+                            <constraint firstItem="59B-ZO-Lgs" firstAttribute="top" secondItem="xET-aV-8dC" secondAttribute="bottom" constant="65" id="OWz-zG-uFr"/>
+                            <constraint firstItem="59B-ZO-Lgs" firstAttribute="trailing" secondItem="tZy-Rj-CVx" secondAttribute="trailing" id="X9a-wE-Gm6"/>
+                            <constraint firstItem="xET-aV-8dC" firstAttribute="top" secondItem="PPv-7S-v3i" secondAttribute="bottom" constant="8" symbolic="YES" id="xo8-QI-P6q"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Az2-nu-uJB"/>
+                    </view>
+                    <connections>
+                        <outlet property="answer0" destination="xET-aV-8dC" id="J3e-lH-gFU"/>
+                        <outlet property="answer1" destination="59B-ZO-Lgs" id="Of8-ba-qzu"/>
+                        <outlet property="answer2" destination="tZy-Rj-CVx" id="dg2-iw-EIC"/>
+                        <outlet property="questionLabel" destination="PPv-7S-v3i" id="LXE-be-QPG"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="G2q-2c-Rda" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1992.8" y="241.52923538230885"/>
         </scene>
         <!--Lesson View Controller-->
         <scene sceneID="DxI-Sd-Hl4">

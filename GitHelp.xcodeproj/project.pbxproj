@@ -18,6 +18,7 @@
 		494B7A981FCB518F00EFB580 /* Question.swift in Sources */ = {isa = PBXBuildFile; fileRef = 494B7A971FCB518F00EFB580 /* Question.swift */; };
 		494B7A9A1FCB537400EFB580 /* APIResourcesQuiz.swift in Sources */ = {isa = PBXBuildFile; fileRef = 494B7A991FCB537400EFB580 /* APIResourcesQuiz.swift */; };
 		494B7A9C1FCB5AFC00EFB580 /* NetworkRequestQuiz.swift in Sources */ = {isa = PBXBuildFile; fileRef = 494B7A9B1FCB5AFC00EFB580 /* NetworkRequestQuiz.swift */; };
+		494B7A9E1FCB727600EFB580 /* QuizTemplateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 494B7A9D1FCB727600EFB580 /* QuizTemplateViewController.swift */; };
 		496E16B71F8D23FE00F2705A /* Lesson.swift in Sources */ = {isa = PBXBuildFile; fileRef = 496E16B61F8D23FE00F2705A /* Lesson.swift */; };
 		49BA73671F9FDD0C00B67446 /* Serialization.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49BA73661F9FDD0C00B67446 /* Serialization.swift */; };
 		49BA736B1F9FDE8900B67446 /* NetworkRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49BA736A1F9FDE8900B67446 /* NetworkRequest.swift */; };
@@ -53,6 +54,7 @@
 		494B7A971FCB518F00EFB580 /* Question.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Question.swift; sourceTree = "<group>"; };
 		494B7A991FCB537400EFB580 /* APIResourcesQuiz.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIResourcesQuiz.swift; sourceTree = "<group>"; };
 		494B7A9B1FCB5AFC00EFB580 /* NetworkRequestQuiz.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkRequestQuiz.swift; sourceTree = "<group>"; };
+		494B7A9D1FCB727600EFB580 /* QuizTemplateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizTemplateViewController.swift; sourceTree = "<group>"; };
 		496E16B61F8D23FE00F2705A /* Lesson.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Lesson.swift; sourceTree = "<group>"; };
 		49BA73661F9FDD0C00B67446 /* Serialization.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Serialization.swift; sourceTree = "<group>"; };
 		49BA736A1F9FDE8900B67446 /* NetworkRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkRequest.swift; sourceTree = "<group>"; };
@@ -102,7 +104,6 @@
 			children = (
 				493BCB731F8C2395006F3EF8 /* GitHelp */,
 				49E0E6261F943784007DFEE7 /* GitHelpTests */,
-				493BCB721F8C2395006F3EF8 /* Products */,
 				7D98DA73E656C0BED8C93AFF /* Pods */,
 				1E75BBE4764EF8CF458289D7 /* Frameworks */,
 			);
@@ -115,6 +116,7 @@
 				49E0E6251F943784007DFEE7 /* GitHelpTests.xctest */,
 			);
 			name = Products;
+			path = ..;
 			sourceTree = "<group>";
 		};
 		493BCB731F8C2395006F3EF8 /* GitHelp */ = {
@@ -164,6 +166,7 @@
 				7F1C9E531FA902E500EB0E30 /* LessonViewController.swift */,
 				7F775DDA1FB4C8CF00DC5CF3 /* BodyTemplateViewController.swift */,
 				493BCB761F8C2395006F3EF8 /* TestViewController.swift */,
+				494B7A9D1FCB727600EFB580 /* QuizTemplateViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -173,6 +176,7 @@
 			children = (
 				49E0E6271F943784007DFEE7 /* GitHelpTests.swift */,
 				49E0E6291F943784007DFEE7 /* Info.plist */,
+				493BCB721F8C2395006F3EF8 /* Products */,
 			);
 			path = GitHelpTests;
 			sourceTree = "<group>";
@@ -355,6 +359,7 @@
 				49BA73671F9FDD0C00B67446 /* Serialization.swift in Sources */,
 				493BCB751F8C2395006F3EF8 /* AppDelegate.swift in Sources */,
 				494B7A941FCB4A9100EFB580 /* CustomCellQuiz.swift in Sources */,
+				494B7A9E1FCB727600EFB580 /* QuizTemplateViewController.swift in Sources */,
 				494B7A9C1FCB5AFC00EFB580 /* NetworkRequestQuiz.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
