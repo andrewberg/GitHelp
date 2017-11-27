@@ -46,14 +46,11 @@ class QuizViewController: BaseViewController, UICollectionViewDataSource, UIColl
         let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
         let resultViewController = storyBoard.instantiateViewController(withIdentifier: "quiz") as! QuizTemplateViewController
         
-        
-
-        
-        resultViewController.quiz = myQuizzes[indexPath.row]
-        
+       
+        resultViewController.quiz = myQuizzes[indexPath.row]        
         resultViewController.navigationItem.title = myQuizzes[indexPath.row].title
         resultViewController.view.backgroundColor = bgColor
-        
+        navigationController?.navigationBar.tintColor = UIColor.white
         self.navigationController?.pushViewController(resultViewController, animated: true)
         
     }

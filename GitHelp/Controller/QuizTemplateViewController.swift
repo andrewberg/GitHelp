@@ -11,6 +11,8 @@ import UIKit
 class QuizTemplateViewController: UIViewController {
     
     var quiz: Quiz!
+    let right = "Correct"
+    let wrong = "Wrong"
 
     @IBOutlet weak var questionLabel: UILabel!
     @IBOutlet weak var numQuestion: UILabel!
@@ -25,11 +27,39 @@ class QuizTemplateViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        setLayout() // changes the look and style of the buttons and text
         curMax = quiz.questions.count
         
         nextQuestion()
         
+    }
+    
+    func setLayout() {
+        answer0.backgroundColor = UIColor.white
+        answer0.layer.cornerRadius = 10.0
+        answer0.layer.borderWidth = 2
+        answer0.layer.borderColor = UIColor.lightGray.cgColor
+        answer0.setTitleColor(UIColor.darkGray, for: .normal)
+        
+        answer1.backgroundColor = UIColor.white
+        answer1.layer.cornerRadius = 10.0
+        answer1.layer.borderWidth = 2
+        answer1.layer.borderColor = UIColor.lightGray.cgColor
+        answer1.setTitleColor(UIColor.darkGray, for: .normal)
+        
+        answer2.backgroundColor = UIColor.white
+        answer2.layer.cornerRadius = 10.0
+        answer2.layer.borderWidth = 2
+        answer2.layer.borderColor = UIColor.lightGray.cgColor
+        answer2.setTitleColor(UIColor.darkGray, for: .normal)
+        
+        questionLabel.adjustsFontSizeToFitWidth = true
+    }
+    
+    func alertPopUp(answer: String) {
+        let alert = UIAlertController(title: answer, message: nil, preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: NSLocalizedString("OK", comment: "Default action"), style: .`default`, handler: nil))
+        self.present(alert, animated: true, completion: nil)
     }
     
     func nextQuestion() {
@@ -55,26 +85,27 @@ class QuizTemplateViewController: UIViewController {
     }
 
     @IBAction func butOne(_ sender: Any) {
+        
         if curAnswer == 0 {
-            print("right")
+            alertPopUp(answer: right)
         } else {
-            print("wrong")
+            alertPopUp(answer: wrong)
         }
     }
 
     @IBAction func butTwo(_ sender: Any) {
         if curAnswer == 1 {
-            print("right")
+            alertPopUp(answer: right)
         } else {
-            print("wrong")
+            alertPopUp(answer: wrong)
         }
     }
 
     @IBAction func butThree(_ sender: Any) {
         if curAnswer == 2 {
-            print("right")
+            alertPopUp(answer: right)
         } else {
-            print("wrong")
+            alertPopUp(answer: wrong)
         }
     }
 
