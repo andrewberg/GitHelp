@@ -19,7 +19,7 @@ class QuizTemplateViewController: UIViewController {
     @IBOutlet weak var answer1: UIButton!
     @IBOutlet weak var answer2: UIButton!
     
-    var curQuestion = 0
+    var curQuestion = -1
     var curAnswer = 0
     var curMax = 0
 
@@ -28,17 +28,25 @@ class QuizTemplateViewController: UIViewController {
         
         curMax = quiz.questions.count
         
-        questionLabel.text = quiz.questions[0].text
+        nextQuestion()
         
-        answer0.setTitle(quiz.questions[0].options[0], for: .normal)
-        answer1.setTitle(quiz.questions[0].options[1], for: .normal)
-        answer2.setTitle(quiz.questions[0].options[2], for: .normal)
-        
-        curAnswer = quiz.questions[0].answer
-        
-        print(curMax)
-        
-        // Do any additional setup after loading the view.
+    }
+    
+    func nextQuestion() {
+        if curQuestion < curMax-1 {
+            curQuestion += 1
+            
+            numQuestion.text = "Question \(curQuestion+1) of \(curMax)"
+            
+            questionLabel.text = quiz.questions[curQuestion].text
+            
+            answer0.setTitle(quiz.questions[curQuestion].options[0], for: .normal)
+            answer1.setTitle(quiz.questions[curQuestion].options[1], for: .normal)
+            answer2.setTitle(quiz.questions[curQuestion].options[2], for: .normal)
+            
+            curAnswer = quiz.questions[curQuestion].answer
+            
+        }
     }
 
     override func didReceiveMemoryWarning() {
@@ -69,6 +77,9 @@ class QuizTemplateViewController: UIViewController {
             print("wrong")
         }
     }
-    
+
+    @IBAction func nextButton(_ sender: Any) {
+        nextQuestion()
+    }
     
 }
