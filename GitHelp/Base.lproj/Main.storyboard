@@ -138,6 +138,7 @@
                         <outlet property="answer0" destination="xET-aV-8dC" id="J3e-lH-gFU"/>
                         <outlet property="answer1" destination="59B-ZO-Lgs" id="Of8-ba-qzu"/>
                         <outlet property="answer2" destination="tZy-Rj-CVx" id="dg2-iw-EIC"/>
+                        <outlet property="nextButton" destination="Y7T-Nl-q9h" id="IuL-0d-jbl"/>
                         <outlet property="numQuestion" destination="oZl-Uv-Ddm" id="YFk-Mf-7Xs"/>
                         <outlet property="questionLabel" destination="PPv-7S-v3i" id="LXE-be-QPG"/>
                     </connections>

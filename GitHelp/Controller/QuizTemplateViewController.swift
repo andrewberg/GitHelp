@@ -21,6 +21,8 @@ class QuizTemplateViewController: UIViewController {
     @IBOutlet weak var answer1: UIButton!
     @IBOutlet weak var answer2: UIButton!
     
+    @IBOutlet weak var nextButton: UIButton!
+    
     var curQuestion = -1
     var curAnswer = 0
     var curMax = 0
@@ -63,6 +65,15 @@ class QuizTemplateViewController: UIViewController {
     }
     
     func nextQuestion() {
+        
+        // reset the question guideline
+        
+        if curQuestion == curMax - 1 {
+            curQuestion = -1
+            nextButton.setTitle("Next Question", for: .normal)
+        }
+        
+        
         if curQuestion < curMax-1 {
             curQuestion += 1
             
@@ -75,8 +86,12 @@ class QuizTemplateViewController: UIViewController {
             answer2.setTitle(quiz.questions[curQuestion].options[2], for: .normal)
             
             curAnswer = quiz.questions[curQuestion].answer
-            
         }
+        
+        if curQuestion == curMax - 1 {
+            nextButton.setTitle("Reset Quiz", for: .normal)
+        }
+        
     }
 
     override func didReceiveMemoryWarning() {
