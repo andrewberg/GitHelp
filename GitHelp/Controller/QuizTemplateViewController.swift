@@ -11,8 +11,9 @@ import UIKit
 class QuizTemplateViewController: UIViewController {
     
     var quiz: Quiz!
-    let right = "Correct"
-    let wrong = "Wrong"
+    let right = "Correct, next question!"
+    let rightFinished = "Correct, the quiz is over!"
+    let wrong = "Incorrect, try again!"
 
     @IBOutlet weak var questionLabel: UILabel!
     @IBOutlet weak var numQuestion: UILabel!
@@ -59,9 +60,19 @@ class QuizTemplateViewController: UIViewController {
     }
     
     func alertPopUp(answer: String) {
+        
         let alert = UIAlertController(title: answer, message: nil, preferredStyle: .alert)
         alert.addAction(UIAlertAction(title: NSLocalizedString("OK", comment: "Default action"), style: .`default`, handler: nil))
-        self.present(alert, animated: true, completion: nil)
+        
+        if answer == right && curQuestion < curMax - 1 {
+            self.present(alert, animated: true, completion: nextQuestion)
+        } else if answer == right && curQuestion == curMax - 1{
+            let alert = UIAlertController(title: rightFinished, message: nil, preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: NSLocalizedString("OK", comment: "Default action"), style: .`default`, handler: nil))
+            self.present(alert, animated: true, completion: nil)
+        } else {
+            self.present(alert, animated: true, completion: nil)
+        }
     }
     
     func nextQuestion() {
@@ -94,13 +105,7 @@ class QuizTemplateViewController: UIViewController {
         
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-
     @IBAction func butOne(_ sender: Any) {
-        
         if curAnswer == 0 {
             alertPopUp(answer: right)
         } else {
@@ -126,6 +131,11 @@ class QuizTemplateViewController: UIViewController {
 
     @IBAction func nextButton(_ sender: Any) {
         nextQuestion()
+    }
+    
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+        // Dispose of any resources that can be recreated.
     }
     
 }
