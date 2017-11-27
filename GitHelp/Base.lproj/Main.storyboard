@@ -24,9 +24,18 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" editable="NO" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="hDm-Dc-JiA">
+                                <rect key="frame" x="16" y="98" width="343" height="483"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <string key="text">This application was created by Andrew Berg, Jared Kraemer and Joy Bushnell for Software Engineering II (CEN 5035) at Florida State University. </string>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="hDm-Dc-JiA" firstAttribute="centerY" secondItem="CXl-hF-uQN" secondAttribute="centerY" id="BAC-qY-1pk"/>
+                            <constraint firstItem="hDm-Dc-JiA" firstAttribute="centerX" secondItem="CXl-hF-uQN" secondAttribute="centerX" id="INh-pi-6hN"/>
                             <constraint firstItem="6tC-gf-b90" firstAttribute="centerX" secondItem="CXl-hF-uQN" secondAttribute="centerX" id="N9A-V3-7Tr"/>
                             <constraint firstItem="6tC-gf-b90" firstAttribute="leading" secondItem="zd2-4b-jay" secondAttribute="leading" constant="97" id="RJM-fV-P88"/>
                             <constraint firstItem="6tC-gf-b90" firstAttribute="top" secondItem="zd2-4b-jay" secondAttribute="top" id="TuX-V9-DwB"/>
@@ -38,7 +47,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zie-WF-G4I" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1793" y="-593"/>
+            <point key="canvasLocation" x="1792.8" y="-593.25337331334333"/>
         </scene>
         <!--Quiz Template View Controller-->
         <scene sceneID="Vdo-d3-0g0">
